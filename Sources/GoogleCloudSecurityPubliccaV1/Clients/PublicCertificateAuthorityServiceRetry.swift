@@ -62,7 +62,7 @@ extension Clients {
         idempotent: false,
         action: {
           (r: CreateExternalAccountKeyRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> ExternalAccountKey
+            -> GoogleCloudSecurityPubliccaV1.ExternalAccountKey
           in
           return try await self.inner.createExternalAccountKey(request: r, options: o)
         })
